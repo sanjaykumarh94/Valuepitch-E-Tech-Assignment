@@ -1,0 +1,14 @@
+{
+  "name": "valuepitch-e-technologies-assignment",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.3",
+    "mongoose-unique-validator": "^2.0.3",
+    "uuid": "^8.3.2"
+  }
+}

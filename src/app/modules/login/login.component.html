@@ -1,0 +1,92 @@
+<div class='bg-img'>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-5 mx-auto">
+            <div class="card">
+              <div class="card-harder">
+                <div class="card-header" style="text-align: center;">
+                  <button class="mb-0 my-2 btn btn-lg mr-2" (click)="togglelogin()" [ngClass]="{ 'seleted' : isShownLogIn
+                  }">
+                    Login
+                  </button>
+                  <button class="mb-0 my-2 btn btn-lg" (click)="togglesignup()" [ngClass]="{'seleted' : isShownSigUp
+                  }">
+                    Sign-up
+                  </button>
+                </div>
+              </div>
+
+
+              <div class="card-body" *ngIf="isShownLogIn" style="background-color: white;">
+                <h5 class="active pb-3"
+                  style="font-weight: 600; letter-spacing: 0.073em;color: #83ddfc;text-decoration-line: underline;">
+                  LOGIN</h5>
+
+                <form [formGroup]="logInFrom" (ngSubmit)="logIn()" class="form" role="form" autocomplete="off"
+                  class="signup-form">
+                  <div class="form-floating">
+                    <input id="email" type="email" formControlName="email" class="form-control" placeholder="email" />
+                    <label for="email">Email address</label>
+                    <span *ngIf="(email.touched || submitted) && email.invalid" class="text-danger">Email is
+                      required</span>
+
+                  </div>
+                  <div class="form-floating">
+                    <input id="password" type="password" class="form-control" formControlName="password"
+                      placeholder="" />
+                    <label for="password">password</label>
+                    <span *ngIf="(password.touched || submitted) && password.invalid" class="text-danger">Password is
+                      required</span>
+
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="float:right;width: 30%;
+                  font-size: 1rem;
+                  background: #7169fe;
+                  border: none;">Log-In</button>
+                </form>
+              </div>
+
+              <div class="card-body" *ngIf="isShownSigUp" style="background-color: white;">
+                <h5 class="active pb-3"
+                  style="font-weight: 600;letter-spacing: 0.073em;color: #83ddfc;text-decoration-line: underline;">
+                  SIGN-UP</h5>
+
+                <form [formGroup]="signUpFrom" (ngSubmit)="signUp()" class="form" role="form" autocomplete="off"
+                  class="signup-form">
+                  <div class="form-floating">
+                    <input id="emailS" type="email" formControlName="emailS" class="form-control" placeholder="email" />
+                    <label for="emailS">Email address</label>
+                    <span *ngIf="(emailS.touched || submitted) && emailS.invalid" class="text-danger">Email is
+                      required</span>
+
+                  </div>
+                  <div class="form-floating">
+                    <input id="passwordS" type="password" class="form-control" formControlName="passwordS"
+                      placeholder="" />
+                    <label for="passwordS">password</label>
+                    <span *ngIf="(passwordS.touched || submitted) && passwordS.invalid" class="text-danger">Password is
+                      required</span>
+
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="float:right;width: 30%;
+                  font-size: 1rem;
+                  background: #7169fe;
+                  border: none;">Sign-Up</button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+      <!--/col-->
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+</div>

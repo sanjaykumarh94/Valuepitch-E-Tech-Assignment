@@ -1,0 +1,63 @@
+.card{
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card{
+    // img{
+    //   height: 150px;
+    // }
+    .avatar {
+      vertical-align: middle;
+      width: 50px;
+      margin: auto;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .edit:hover{
+    // -ms-text-underline-position: red;
+    text-decoration: underline red;
+     transform: scale(1.05);
+     cursor: pointer;
+  // box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+
+  .t-picker {
+    color: gray;
+
+    &__tenant:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition: transform 0.2s;
+    }
+
+    &__img {
+      display: block;
+      text-align: center;
+    }
+
+    &__name {
+      font-weight: bold;
+      letter-spacing: 0.2px;
+    }
+
+    &__details-line {
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: gray;
+      }
+      span:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+.avatar{ vertical-align: middle;
+  width: auto !important;
+  height: 50px;
+  border-radius: 50%;
+margin-left: 5px;}
